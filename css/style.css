@@ -717,3 +717,88 @@ footer {
     transform: none;
   }
 }
+
+/* =========================
+   Typografie-Feinschliff
+========================= */
+
+h1,
+h2,
+.detail-grid h3,
+.date-number {
+  letter-spacing: -0.02em;
+}
+
+.hero-text,
+.intro p,
+.details p,
+.photo-caption {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.eyebrow,
+.section-label,
+.navigation a,
+.detail-number,
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.eyebrow,
+.section-label {
+  font-weight: 500;
+}
+
+h1 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.hero-text {
+  color: #505246;
+}
+
+.photo-caption {
+  letter-spacing: 0.02em;
+}
+
+
+/* =========================
+   Elegantere Animationen
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.detail-grid article:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.detail-grid article:nth-child(2) {
+  transition-delay: 0.14s;
+}
+
+.detail-grid article:nth-child(3) {
+  transition-delay: 0.23s;
+}
+
+.photo-frame {
+  transition:
+    transform 0.9s ease,
+    opacity 0.9s ease;
+}
+
+.date-card {
+  transition:
+    transform 0.9s ease,
+    opacity 0.9s ease;
+}
