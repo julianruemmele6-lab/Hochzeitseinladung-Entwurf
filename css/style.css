@@ -469,3 +469,267 @@ footer {
     border-radius: 120px 120px 28px 28px;
   }
 }
+
+/* =========================
+   Lavendel-Dekoration
+========================= */
+
+.botanical {
+  width: 220px;
+  height: 360px;
+  border: 0;
+  border-radius: 0;
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.botanical::before,
+.botanical::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform-origin: bottom center;
+}
+
+.botanical::before {
+  width: 2px;
+  height: 270px;
+  bottom: 15px;
+  background: var(--olive-light);
+  transform: translateX(-50%) rotate(-8deg);
+}
+
+.botanical::after {
+  width: 95px;
+  height: 250px;
+  bottom: 60px;
+  transform: translateX(-50%) rotate(-8deg);
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      var(--lavender) 0 22%,
+      transparent 25%
+    );
+
+  background-size: 24px 32px;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+.botanical span {
+  display: none;
+}
+
+.botanical-left {
+  left: -75px;
+  top: 18%;
+  transform: rotate(-18deg);
+}
+
+.botanical-right {
+  right: -70px;
+  bottom: 6%;
+  transform: scaleX(-1) rotate(-14deg);
+}
+
+
+/* =========================
+   Scroll-Animationen
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.photo-frame.reveal {
+  transform: translateY(40px) scale(0.985);
+}
+
+.photo-frame.reveal.is-visible {
+  transform: translateY(0) scale(1);
+}
+
+
+/* =========================
+   Navigation beim Scrollen
+========================= */
+
+.site-header {
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(247, 243, 236, 0.96);
+  box-shadow: 0 8px 30px rgba(62, 64, 57, 0.06);
+}
+
+
+/* =========================
+   Mobile Feinschliff
+========================= */
+
+@media (max-width: 760px) {
+
+  .site-header {
+    padding: 16px 18px;
+  }
+
+  .navigation {
+    gap: 11px;
+  }
+
+  .navigation a {
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding:
+      calc(90px + env(safe-area-inset-top))
+      18px
+      54px;
+  }
+
+  h1 {
+    font-size: clamp(3.7rem, 18vw, 5.4rem);
+  }
+
+  .hero-text {
+    max-width: 320px;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .date {
+    font-size: 0.95rem;
+  }
+
+  .countdown {
+    font-size: 1.08rem;
+  }
+
+  .button {
+    padding: 13px 20px;
+  }
+
+  .botanical {
+    width: 150px;
+    height: 280px;
+    opacity: 0.27;
+  }
+
+  .botanical-left {
+    left: -72px;
+    top: 22%;
+  }
+
+  .botanical-right {
+    right: -68px;
+    bottom: 2%;
+  }
+
+  .photo-section {
+    padding: 25px 16px 90px;
+  }
+
+  .photo-frame {
+    border-radius: 70px 70px 18px 18px;
+  }
+
+  .photo-frame img {
+    height: 58vh;
+    min-height: 420px;
+  }
+
+  .section {
+    padding: 80px 20px;
+  }
+
+  .intro .lead {
+    font-size: 1.12rem;
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
+  }
+
+  .date-card {
+    padding: 52px 20px;
+  }
+
+  .date-number {
+    font-size: clamp(5.5rem, 26vw, 8rem);
+  }
+
+  .date-copy {
+    font-size: 1.18rem;
+  }
+
+  .detail-grid article {
+    padding: 26px 8px 30px;
+  }
+
+  footer {
+    padding-bottom:
+      calc(40px + env(safe-area-inset-bottom));
+  }
+}
+
+
+/* Sehr kleine Smartphones */
+
+@media (max-width: 420px) {
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .navigation a:nth-child(2) {
+    display: none;
+  }
+
+  .hero {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .photo-frame img {
+    height: 52vh;
+    min-height: 360px;
+  }
+}
+
+
+/* Weniger Bewegung für Nutzer, die das wünschen */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
