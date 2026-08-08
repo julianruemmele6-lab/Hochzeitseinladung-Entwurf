@@ -18,3 +18,48 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 60 * 60 * 1000);
+
+// Elemente beim Scrollen weich einblenden
+
+const revealElements = document.querySelectorAll(
+  ".photo-frame, .intro, .date-card, .details h2, .detail-grid article"
+);
+
+revealElements.forEach((element) => {
+  element.classList.add("reveal");
+});
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.15
+  }
+);
+
+revealElements.forEach((element) => {
+  revealObserver.observe(element);
+});
+
+
+// Navigation beim Scrollen etwas deutlicher machen
+
+const header = document.querySelector(".site-header");
+
+function updateHeader() {
+  if (window.scrollY > 40) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+}
+
+updateHeader();
+
+window.addEventListener("scroll", updateHeader);
