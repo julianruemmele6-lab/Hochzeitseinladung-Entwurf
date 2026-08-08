@@ -1,0 +1,90 @@
+<svg width="280" height="520" viewBox="0 0 280 520"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <g fill="none"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+    <!-- Hauptstiel -->
+    <path
+      d="M138 500
+         C132 420 144 350 132 285
+         C121 225 129 160 142 70"
+      stroke="#7D8767"
+      stroke-width="3"
+      opacity="0.72"
+    />
+
+    <!-- kleine Seitenzweige -->
+    <path
+      d="M135 380 C105 350 87 330 70 298"
+      stroke="#7D8767"
+      stroke-width="2"
+      opacity="0.6"
+    />
+
+    <path
+      d="M135 330 C164 301 181 278 193 246"
+      stroke="#7D8767"
+      stroke-width="2"
+      opacity="0.6"
+    />
+
+    <path
+      d="M132 275 C104 250 88 225 81 196"
+      stroke="#7D8767"
+      stroke-width="2"
+      opacity="0.58"
+    />
+
+    <path
+      d="M135 230 C160 207 177 181 184 153"
+      stroke="#7D8767"
+      stroke-width="2"
+      opacity="0.58"
+    />
+
+    <!-- Blätter -->
+    <g fill="#7D8767" opacity="0.38" stroke="none">
+
+      <ellipse cx="111" cy="349" rx="7" ry="22"
+               transform="rotate(-47 111 349)" />
+
+      <ellipse cx="160" cy="305" rx="7" ry="22"
+               transform="rotate(45 160 305)" />
+
+      <ellipse cx="105" cy="252" rx="6" ry="20"
+               transform="rotate(-45 105 252)" />
+
+      <ellipse cx="160" cy="211" rx="6" ry="19"
+               transform="rotate(42 160 211)" />
+
+      <ellipse cx="121" cy="418" rx="7" ry="23"
+               transform="rotate(-30 121 418)" />
+
+    </g>
+
+    <!-- Lavendelblüten -->
+    <g fill="#A89BB8" stroke="none">
+
+      <ellipse cx="142" cy="64" rx="9" ry="17" opacity="0.9"/>
+      <ellipse cx="130" cy="82" rx="9" ry="17" opacity="0.82"/>
+      <ellipse cx="151" cy="89" rx="10" ry="18" opacity="0.92"/>
+      <ellipse cx="135" cy="105" rx="10" ry="18" opacity="0.85"/>
+      <ellipse cx="153" cy="116" rx="9" ry="17" opacity="0.8"/>
+      <ellipse cx="131" cy="126" rx="9" ry="17" opacity="0.88"/>
+      <ellipse cx="148" cy="139" rx="9" ry="17" opacity="0.76"/>
+
+      <ellipse cx="78" cy="190" rx="8" ry="14" opacity="0.65"/>
+      <ellipse cx="85" cy="207" rx="8" ry="14" opacity="0.72"/>
+      <ellipse cx="91" cy="223" rx="7" ry="13" opacity="0.64"/>
+
+      <ellipse cx="184" cy="146" rx="8" ry="14" opacity="0.68"/>
+      <ellipse cx="180" cy="165" rx="8" ry="14" opacity="0.74"/>
+      <ellipse cx="174" cy="181" rx="7" ry="13" opacity="0.62"/>
+
+    </g>
+
+  </g>
+
+</svg>
