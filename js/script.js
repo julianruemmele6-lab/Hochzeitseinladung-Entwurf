@@ -22,7 +22,7 @@ setInterval(updateCountdown, 60 * 60 * 1000);
 // Elemente beim Scrollen weich einblenden
 
 const revealElements = document.querySelectorAll(
-  ".photo-frame, .intro, .date-card, .details h2, .detail-grid article"
+  ".photo-frame, .intro, .date-card, .details h2, .timeline-item, .location-card"
 );
 
 revealElements.forEach((element) => {
