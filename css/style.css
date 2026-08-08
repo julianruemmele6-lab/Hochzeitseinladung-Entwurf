@@ -124,3 +124,21 @@ h1 {
     font-size: 1.2rem;
   }
 }
+
+/* Verlobungsfoto */
+
+.engagement-photo {
+  max-width: 760px;
+  margin: 40px auto 80px;
+  padding: 0 24px;
+}
+
+.engagement-photo img {
+  display: block;
+  width: 100%;
+  max-height: 720px;
+  object-fit: cover;
+  border-radius: 24px;
+  filter: grayscale(100%);
+  opacity: 0.94;
+}
