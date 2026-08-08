@@ -860,3 +860,162 @@ h1 {
     transform 0.9s ease,
     opacity 0.9s ease;
 }
+/* =========================
+   Tagesablauf
+========================= */
+
+.timeline {
+  max-width: 760px;
+  margin: 70px auto 110px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 30px;
+
+  padding: 28px 0;
+
+  border-top: 1px solid var(--lavender-light);
+}
+
+.timeline-item:last-child {
+  border-bottom: 1px solid var(--lavender-light);
+}
+
+.timeline-time {
+  color: var(--lavender);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+
+  letter-spacing: 0.16em;
+}
+
+.timeline-content h3 {
+  margin: 0 0 8px;
+
+  color: var(--olive-dark);
+
+  font-size: 1.55rem;
+  font-weight: 400;
+}
+
+.timeline-content p {
+  margin: 0;
+
+  color: var(--text);
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   Locations
+========================= */
+
+.locations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 28px;
+
+  margin-top: 50px;
+}
+
+.location-card {
+  padding: 46px 38px;
+
+  border: 1px solid var(--lavender-light);
+  border-radius: 42px;
+
+  background: rgba(255, 253, 249, 0.48);
+
+  text-align: left;
+}
+
+.location-label {
+  margin: 0 0 20px;
+
+  color: var(--lavender);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.location-card h3 {
+  margin: 0 0 18px;
+
+  color: var(--olive-dark);
+
+  font-size: 1.8rem;
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+.location-address {
+  margin-bottom: 28px;
+
+  line-height: 1.7;
+}
+
+.location-link {
+  display: inline-block;
+
+  color: var(--olive-dark);
+
+  text-decoration: none;
+
+  border-bottom: 1px solid var(--lavender);
+
+  padding-bottom: 3px;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.location-link:hover {
+  color: var(--lavender);
+  border-color: var(--olive);
+}
+
+
+/* Mobile */
+
+@media (max-width: 760px) {
+
+  .timeline {
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 72px 1fr;
+    gap: 18px;
+
+    padding: 22px 0;
+  }
+
+  .timeline-time {
+    font-size: 0.76rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .locations {
+    grid-template-columns: 1fr;
+  }
+
+  .location-card {
+    padding: 34px 26px;
+    border-radius: 30px;
+  }
+
+}
