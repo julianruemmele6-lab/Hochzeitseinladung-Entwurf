@@ -1,9 +1,13 @@
 :root {
-  --cream: #F8F5EF;
-  --olive: #6B7753;
-  --olive-dark: #4F5B3D;
-  --lavender: #A89BB8;
-  --text: #3F3F3F;
+  --cream: #f7f3ec;
+  --cream-dark: #eee8dd;
+  --olive: #697457;
+  --olive-dark: #4d5941;
+  --olive-light: #aab29a;
+  --lavender: #aaa0bc;
+  --lavender-light: #ded8e7;
+  --text: #3e4039;
+  --white: #fffdf9;
 }
 
 * {
@@ -16,129 +20,452 @@ html {
 
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
   background: var(--cream);
   color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
 }
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+
+/* Navigation */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 5vw;
+
+  background: rgba(247, 243, 236, 0.88);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(77, 89, 65, 0.08);
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--olive-dark);
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+}
+
+.navigation {
+  display: flex;
+  gap: 28px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--olive-dark);
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* Hero */
 
 .hero {
   min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
+
+  position: relative;
+
+  padding: 130px 24px 80px;
+
+  overflow: hidden;
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 760px;
+  text-align: center;
+  z-index: 2;
 }
 
-.eyebrow {
+.eyebrow,
+.section-label {
   margin-bottom: 24px;
+
   color: var(--olive);
-  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  font-size: 0.85rem;
 }
 
 h1 {
   margin: 0;
+
   color: var(--olive-dark);
-  font-size: clamp(3rem, 10vw, 6.5rem);
-  font-weight: normal;
-  line-height: 0.95;
+
+  font-size: clamp(4rem, 10vw, 7.5rem);
+  font-weight: 400;
+
+  line-height: 0.88;
 }
 
 .ampersand {
   display: block;
-  margin: 12px 0;
+
+  margin: 16px 0;
+
   color: var(--lavender);
+
+  font-size: 0.58em;
   font-style: italic;
-  font-size: 0.65em;
 }
 
-.subtitle {
-  margin-top: 32px;
-  font-size: 1.4rem;
-  color: var(--olive-dark);
+.hero-text {
+  max-width: 560px;
+
+  margin: 38px auto 0;
+
+  font-size: 1.18rem;
+  line-height: 1.7;
 }
 
 .date {
-  margin-top: 12px;
-  font-size: 1.15rem;
+  margin-top: 18px;
+
+  color: var(--olive-dark);
+  font-size: 1.05rem;
+
+  letter-spacing: 0.06em;
 }
 
 .divider {
-  width: 80px;
+  width: 76px;
   height: 1px;
+
+  margin: 28px auto;
+
   background: var(--lavender);
-  margin: 32px auto;
 }
 
 .countdown {
-  font-size: 1.3rem;
   color: var(--olive-dark);
+
+  font-size: 1.2rem;
 }
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
   margin-top: 28px;
+
   padding: 14px 24px;
+
   border: 1px solid var(--olive);
-  border-radius: 999px;
+  border-radius: 100px;
+
   color: var(--olive-dark);
+
   text-decoration: none;
-  transition: 0.3s ease;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .button:hover {
   background: var(--olive);
-  color: white;
+  color: var(--white);
+
+  transform: translateY(-2px);
 }
 
-.intro {
-  max-width: 760px;
+
+/* Botanische Details */
+
+.botanical {
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  border: 1px solid rgba(170, 160, 188, 0.35);
+  border-radius: 50%;
+
+  color: var(--lavender);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.2rem;
+}
+
+.botanical-left {
+  left: -120px;
+  top: 22%;
+}
+
+.botanical-right {
+  right: -120px;
+  bottom: 14%;
+}
+
+
+/* Foto */
+
+.photo-section {
+  max-width: 980px;
+
   margin: 0 auto;
-  padding: 100px 24px;
+
+  padding: 40px 24px 130px;
+
   text-align: center;
 }
 
-.intro h2 {
-  color: var(--olive-dark);
-  font-size: 2.3rem;
-  font-weight: normal;
+.photo-frame {
+  overflow: hidden;
+
+  border-radius: 160px 160px 26px 26px;
+
+  background: var(--cream-dark);
 }
 
-.intro p {
-  font-size: 1.1rem;
+.photo-frame img {
+  display: block;
+
+  width: 100%;
+  height: min(75vh, 760px);
+
+  object-fit: cover;
+
+  filter:
+    grayscale(100%)
+    contrast(0.95);
+
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.photo-frame:hover img {
+  transform: scale(1.015);
+
+  filter:
+    grayscale(75%)
+    contrast(0.96);
+}
+
+.photo-caption {
+  margin-top: 20px;
+
+  color: var(--olive);
+
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+
+/* Gemeinsame Sektionen */
+
+.section {
+  max-width: 920px;
+
+  margin: 0 auto;
+
+  padding: 120px 24px;
+}
+
+.intro {
+  text-align: center;
+}
+
+h2 {
+  margin: 0 0 28px;
+
+  color: var(--olive-dark);
+
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+.intro p,
+.details p {
   line-height: 1.8;
 }
 
-@media (max-width: 600px) {
+.lead {
+  max-width: 700px;
+
+  margin: 0 auto 24px;
+
+  font-size: 1.25rem;
+}
+
+
+/* Save the Date */
+
+.date-section {
+  padding-top: 60px;
+}
+
+.date-card {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  padding: 70px 40px;
+
+  text-align: center;
+
+  border: 1px solid var(--lavender-light);
+  border-radius: 220px 220px 40px 40px;
+
+  background: rgba(255, 253, 249, 0.45);
+}
+
+.date-number {
+  color: var(--olive-dark);
+
+  font-size: clamp(6rem, 18vw, 10rem);
+
+  line-height: 0.9;
+}
+
+.date-copy {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+
+  margin-top: 20px;
+
+  color: var(--lavender);
+
+  font-size: 1.4rem;
+}
+
+
+/* Details */
+
+.details {
+  text-align: center;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+
+  margin-top: 60px;
+
+  text-align: left;
+}
+
+.detail-grid article {
+  min-height: 260px;
+
+  padding: 34px 28px;
+
+  border-top: 1px solid var(--lavender);
+}
+
+.detail-number {
+  color: var(--lavender);
+
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+}
+
+.detail-grid h3 {
+  margin: 24px 0 16px;
+
+  color: var(--olive-dark);
+
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+
+/* Footer */
+
+footer {
+  padding: 40px 24px 60px;
+
+  text-align: center;
+
+  color: var(--olive);
+
+  font-size: 0.9rem;
+}
+
+
+/* Smartphone */
+
+@media (max-width: 760px) {
+
+  .site-header {
+    padding: 18px 20px;
+  }
+
+  .navigation {
+    gap: 14px;
+  }
+
+  .navigation a {
+    font-size: 0.68rem;
+  }
+
   .hero {
-    padding: 24px 18px;
+    padding-top: 120px;
   }
 
-  .subtitle {
-    font-size: 1.2rem;
+  .botanical {
+    width: 180px;
+    height: 180px;
   }
-}
 
-/* Verlobungsfoto */
+  .photo-frame {
+    border-radius: 90px 90px 20px 20px;
+  }
 
-.engagement-photo {
-  max-width: 760px;
-  margin: 40px auto 80px;
-  padding: 0 24px;
-}
+  .photo-frame img {
+    height: 62vh;
+  }
 
-.engagement-photo img {
-  display: block;
-  width: 100%;
-  max-height: 720px;
-  object-fit: cover;
-  border-radius: 24px;
-  filter: grayscale(100%);
-  opacity: 0.94;
+  .section {
+    padding: 90px 22px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .detail-grid article {
+    min-height: auto;
+  }
+
+  .date-card {
+    padding: 58px 24px;
+
+    border-radius: 120px 120px 28px 28px;
+  }
 }
