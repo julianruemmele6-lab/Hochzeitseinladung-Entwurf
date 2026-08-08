@@ -4,16 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Unsere Hochzeit</title>
+  <title>Teresa & Julian | Hochzeit</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
 
+  <header class="site-header">
+    <a href="#start" class="logo">T & J</a>
+
+    <nav class="navigation">
+      <a href="#einladung">Einladung</a>
+      <a href="#datum">Datum</a>
+      <a href="#details">Details</a>
+    </nav>
+  </header>
+
   <main>
 
-    <section class="hero">
+    <section class="hero" id="start">
+
+      <div class="botanical botanical-left">
+        <span>✦</span>
+      </div>
+
       <div class="hero-content">
 
         <p class="eyebrow">Wir heiraten</p>
@@ -24,7 +39,9 @@
           Julian
         </h1>
 
-        <p class="subtitle">Wir freuen uns, diesen besonderen Tag mit euch zu feiern.</p>
+        <p class="hero-text">
+          Wir freuen uns, diesen besonderen Tag mit euch zu feiern.
+        </p>
 
         <p class="date">19. Juni 2027</p>
 
@@ -34,33 +51,112 @@
           Countdown wird geladen …
         </p>
 
-        <a class="button" href="#einladung">
-          Einladung entdecken ↓
+        <a href="#einladung" class="button">
+          Einladung entdecken
+          <span>↓</span>
         </a>
 
       </div>
+
+      <div class="botanical botanical-right">
+        <span>✦</span>
+      </div>
+
     </section>
-    
-<section class="engagement-photo">
-  <img
-    src="engagement.jpeg"
-    alt="Unsere Hände mit Verlobungsring"
-  >
-</section>
-    
-    <section id="einladung" class="intro">
 
-      <h2>Schön, dass ihr dabei seid.</h2>
+    <section class="photo-section">
 
-      <p>
-        Auf dieser Seite findet ihr bald alle wichtigen Informationen
-        zu unserer Hochzeit, dem Ablauf, der Location und natürlich
-        die Möglichkeit zur Zu- oder Absage.
+      <div class="photo-frame">
+        <img
+          src="engagement.jpeg"
+          alt="Unsere Hände mit Verlobungsring"
+        >
+      </div>
+
+      <p class="photo-caption">
+        Ein kleines Ja zum großen Wir.
       </p>
 
     </section>
 
+    <section class="intro section" id="einladung">
+
+      <p class="section-label">Unsere Einladung</p>
+
+      <h2>Schön, dass ihr dabei seid.</h2>
+
+      <p class="lead">
+        Am 19. Juni 2027 möchten wir mit euch einen Tag voller
+        Liebe, Leichtigkeit und schöner Erinnerungen verbringen.
+      </p>
+
+      <p>
+        Auf dieser Seite findet ihr nach und nach alle wichtigen
+        Informationen zu unserer Hochzeit, zum Ablauf, zur Location
+        und später auch zur Zu- oder Absage.
+      </p>
+
+    </section>
+
+    <section class="date-section section" id="datum">
+
+      <div class="date-card">
+
+        <p class="section-label">Save the date</p>
+
+        <div class="date-number">19</div>
+
+        <div class="date-copy">
+          <strong>Juni</strong>
+          <span>2027</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="details section" id="details">
+
+      <p class="section-label">Mehr folgt bald</p>
+
+      <h2>Alles für unseren Tag.</h2>
+
+      <div class="detail-grid">
+
+        <article>
+          <span class="detail-number">01</span>
+          <h3>Ablauf</h3>
+          <p>
+            Empfang, Trauung, Dinner und Feier – den genauen Ablauf
+            ergänzen wir hier.
+          </p>
+        </article>
+
+        <article>
+          <span class="detail-number">02</span>
+          <h3>Location</h3>
+          <p>
+            Adresse, Anfahrt und weitere Hinweise zur Location folgen.
+          </p>
+        </article>
+
+        <article>
+          <span class="detail-number">03</span>
+          <h3>RSVP</h3>
+          <p>
+            Später könnt ihr direkt über diese Website zu- oder absagen.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
   </main>
+
+  <footer>
+    <p>Teresa & Julian · 19. Juni 2027</p>
+  </footer>
 
   <script src="js/script.js"></script>
 
