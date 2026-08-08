@@ -468,71 +468,55 @@ footer {
 
     border-radius: 120px 120px 28px 28px;
   }
+  .botanical {
+  width: 155px;
 }
+
+.botanical-left {
+  left: -62px;
+  top: 19%;
+  opacity: 0.38;
+}
+
+.botanical-right {
+  right: -62px;
+  bottom: 4%;
+  opacity: 0.32;
+}
+}
+
 
 /* =========================
    Lavendel-Dekoration
 ========================= */
 
 .botanical {
-  width: 220px;
-  height: 360px;
-  border: 0;
-  border-radius: 0;
-  opacity: 0.42;
-  pointer-events: none;
-}
-
-.botanical::before,
-.botanical::after {
-  content: "";
   position: absolute;
-  left: 50%;
-  transform-origin: bottom center;
+  width: 230px;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.botanical::before {
-  width: 2px;
-  height: 270px;
-  bottom: 15px;
-  background: var(--olive-light);
-  transform: translateX(-50%) rotate(-8deg);
-}
-
-.botanical::after {
-  width: 95px;
-  height: 250px;
-  bottom: 60px;
-  transform: translateX(-50%) rotate(-8deg);
-
-  background:
-    radial-gradient(
-      ellipse at center,
-      var(--lavender) 0 22%,
-      transparent 25%
-    );
-
-  background-size: 24px 32px;
-  background-repeat: repeat-y;
-  background-position: center;
-}
-
-.botanical span {
-  display: none;
+.botanical img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .botanical-left {
-  left: -75px;
-  top: 18%;
-  transform: rotate(-18deg);
+  left: -55px;
+  top: 15%;
+  transform: rotate(-14deg);
+  opacity: 0.58;
 }
 
 .botanical-right {
-  right: -70px;
-  bottom: 6%;
+  right: -55px;
+  bottom: 3%;
   transform: scaleX(-1) rotate(-14deg);
+  opacity: 0.46;
 }
-
 
 /* =========================
    Scroll-Animationen
