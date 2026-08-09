@@ -116,11 +116,63 @@ attendanceOptions.forEach((option) => {
 
 
 // Formular absenden
-rsvpForm.addEventListener("submit", (event) => {
-
+rsvpForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  formStatus.textContent =
-    "Danke für deine Rückmeldung! 💜";
+  const submitButton = rsvpForm.querySelector(".rsvp-submit");
 
+  const formData = new FormData(rsvpForm);
+
+  const data = {
+    name: formData.get("name"),
+    attendance: formData.get("attendance"),
+    menu: formData.get("menu"),
+    food: formData.get("food"),
+    message: formData.get("message")
+  };
+
+  formStatus.textContent = "Deine Antwort wird gespeichert …";
+
+  submitButton.disabled = true;
+  submitButton.textContent = "Wird gesendet …";
+
+  try {
+    const response = await fetch("/api/rsvp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        result.message || "Die Antwort konnte nicht gespeichert werden."
+      );
+    }
+
+    formStatus.textContent =
+      "Vielen Dank! Deine Rückmeldung wurde gespeichert. 💜";
+
+    rsvpForm.reset();
+
+    attendanceDetails.classList.remove("is-hidden");
+
+    menuOptions.forEach((menu) => {
+      menu.required = false;
+    });
+
+  } catch (error) {
+    console.error(error);
+
+    formStatus.textContent =
+      error.message ||
+      "Leider ist etwas schiefgelaufen. Bitte versuche es noch einmal.";
+
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = "Antwort senden";
+  }
 });
