@@ -1884,3 +1884,111 @@ h1 {
     scroll-margin-top: 85px;
   }
 }
+/* =========================
+   Mobile Final Polish
+========================= */
+
+@media (max-width: 760px) {
+
+  /* Header etwas kompakter */
+  .site-header {
+    padding: 14px 16px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 100svh;
+    padding:
+      calc(88px + env(safe-area-inset-top))
+      16px
+      48px;
+  }
+
+  h1 {
+    font-size: clamp(3.6rem, 17vw, 5rem);
+    line-height: 0.9;
+  }
+
+  .hero-text {
+    max-width: 310px;
+    margin-top: 26px;
+    font-size: 0.98rem;
+  }
+
+  .date {
+    margin-top: 14px;
+  }
+
+  /* Galerie */
+  .gallery-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .gallery-photo {
+    border-radius: 22px;
+  }
+
+  .gallery-photo-large {
+    height: 440px;
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .faq-item summary {
+    padding: 22px 2px;
+    font-size: 1.08rem;
+  }
+
+  /* RSVP */
+  .rsvp-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .rsvp-note {
+    margin-bottom: 36px;
+  }
+
+  .radio-card {
+    padding: 15px 16px;
+  }
+
+  .rsvp-submit {
+    min-height: 52px;
+  }
+
+  /* Abschluss */
+  .closing-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  h1 {
+    font-size: clamp(3.2rem, 18vw, 4.5rem);
+  }
+
+  .gallery-photo-large {
+    height: 400px;
+  }
+
+  .gallery-photo {
+    height: 280px;
+  }
+
+  .faq-item summary {
+    font-size: 1rem;
+  }
+
+}
