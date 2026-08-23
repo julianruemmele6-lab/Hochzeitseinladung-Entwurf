@@ -1823,4 +1823,29 @@ h1 {
   .gallery-photo:hover img {
     transform: none;
   }
+ }
+.closing-section {
+  max-width: 720px;
+  margin: 100px auto 40px;
+  text-align: center;
+}
+
+.closing-lavender {
+  width: 100px;
+  margin-bottom: 30px;
+  opacity: 0.45;
+}
+
+.closing-section > p:not(.section-label):not(.closing-signature) {
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.08rem;
+}
+
+.closing-signature {
+  margin-top: 32px;
+  color: var(--olive-dark);
+  font-size: 1.2rem;
+  font-style: italic;
 }
