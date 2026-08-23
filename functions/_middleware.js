@@ -14,6 +14,7 @@ async function createToken(password, secret) {
 }
 
 
+
 function getCookie(request, name) {
   const cookieHeader =
     request.headers.get("Cookie") || "";
