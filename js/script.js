@@ -1,4 +1,4 @@
-const weddingDate = new Date("2027-07-18T00:00:00");
+const weddingDate = new Date("2027-06-19T00:00:00");
 
   const rsvpSuccess =
   document.getElementById("rsvpSuccess");
