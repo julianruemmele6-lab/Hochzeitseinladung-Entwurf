@@ -1864,3 +1864,23 @@ h1 {
   color: var(--lavender);
   font-weight: 400;
 }
+/* =========================
+   Anker-Abstand für fixe Navigation
+========================= */
+
+#einladung,
+#details,
+#galerie,
+#faq,
+#rsvp {
+  scroll-margin-top: 110px;
+}
+@media (max-width: 760px) {
+  #einladung,
+  #details,
+  #galerie,
+  #faq,
+  #rsvp {
+    scroll-margin-top: 85px;
+  }
+}
