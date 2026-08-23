@@ -2,7 +2,9 @@ export async function onRequestPost(context) {
   try {
     const data = await context.request.json();
 
-    const name = data.name?.trim();
+    const name = data.name
+  ?.trim()
+  .replace(/\s+/g, " ");
     const attendance = data.attendance;
     const menu = data.menu || null;
     const food = data.food?.trim() || null;
