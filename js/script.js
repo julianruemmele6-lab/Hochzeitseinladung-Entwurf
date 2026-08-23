@@ -6,6 +6,15 @@ function updateCountdown() {
 
   const countdown = document.getElementById("countdown");
 
+  const rsvpSuccess =
+  document.getElementById("rsvpSuccess");
+
+const successTitle =
+  document.getElementById("successTitle");
+
+const successText =
+  document.getElementById("successText");
+
   if (difference <= 0) {
     countdown.textContent = "Heute ist unser großer Tag! 💚";
     return;
@@ -153,11 +162,38 @@ rsvpForm.addEventListener("submit", async (event) => {
       );
     }
 
-    formStatus.textContent =
-      "Vielen Dank! Deine Rückmeldung wurde gespeichert. 💜";
+    const attendance = data.attendance;
 
-    rsvpForm.reset();
+rsvpForm.reset();
 
+formStatus.textContent = "";
+
+rsvpForm.style.display = "none";
+
+
+if (attendance === "yes") {
+
+  successTitle.textContent =
+    "Vielen Dank.";
+
+  successText.textContent =
+    "Wir haben deine Rückmeldung gespeichert und freuen uns sehr darauf, unseren großen Tag mit dir zu feiern.";
+
+}
+
+
+if (attendance === "no") {
+
+  successTitle.textContent =
+    "Danke für deine Rückmeldung.";
+
+  successText.textContent =
+    "Schade, dass du an diesem Tag nicht dabei sein kannst. Danke, dass du uns Bescheid gegeben hast.";
+
+}
+
+
+rsvpSuccess.classList.add("is-visible");
     attendanceDetails.classList.remove("is-hidden");
 
     menuOptions.forEach((menu) => {
