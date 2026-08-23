@@ -13,8 +13,6 @@ async function createToken(password, secret) {
     .join("");
 }
 
-
-
 function getCookie(request, name) {
   const cookieHeader =
     request.headers.get("Cookie") || "";
