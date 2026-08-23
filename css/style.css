@@ -1221,24 +1221,27 @@ h1 {
 @media (max-width: 760px) {
 
   .faq-section {
-    margin-top: 90px;
-    padding: 0;
-  }
+  margin-top: 90px;
+  padding: 0 20px;
+}
 
   .faq-intro {
     margin-bottom: 45px;
   }
 
-  .faq-item summary {
-    padding: 23px 2px;
+ .faq-item summary {
+  padding: 24px 4px;
+  font-size: 1.12rem;
+  line-height: 1.4;
+}
 
-    font-size: 1.15rem;
-  }
+.faq-answer {
+  padding: 0 30px 24px 4px;
+}
 
-  .faq-answer {
-    padding: 0 35px 24px 2px;
-  }
-
+.faq-answer p {
+  line-height: 1.7;
+}
 }
 .rsvp-note {
   max-width: 560px;
