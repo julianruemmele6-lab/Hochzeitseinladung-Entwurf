@@ -34,7 +34,7 @@ setInterval(updateCountdown, 60 * 60 * 1000);
 // Elemente beim Scrollen weich einblenden
 
 const revealElements = document.querySelectorAll(
-  ".photo-frame, .intro, .date-card, .details h2, .timeline-item, .transition-section, .faq-section, .location-card"
+  ".photo-frame, .intro, .date-card, .details h2, .timeline-item, .transition-section, .faq-section, .location-card, .gallery-photo"
 );
 
 revealElements.forEach((element) => {
