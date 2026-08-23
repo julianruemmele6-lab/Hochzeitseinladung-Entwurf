@@ -191,7 +191,7 @@ if (attendance === "no") {
     "Danke für deine Rückmeldung.";
 
   successText.textContent =
-    "Schade, dass du an diesem Tag nicht dabei sein kannst. Danke, dass du uns Bescheid gegeben hast.";
+    "Schade, dass du an diesem Tag nicht dabei sein kannst.";
 
 }
 
