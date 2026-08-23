@@ -1714,3 +1714,18 @@ h1 {
   }
 
 }
+.rsvp-deadline {
+  margin: 28px auto 18px;
+
+  color: var(--olive-dark);
+
+  font-size: 1.1rem;
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+.rsvp-deadline strong {
+  color: var(--lavender);
+  font-weight: 400;
+}
