@@ -215,3 +215,62 @@ rsvpSuccess.classList.add("is-visible");
     submitButton.textContent = "Antwort senden";
   }
 });
+// =========================
+// Mobile Navigation
+// =========================
+
+const menuToggle = document.getElementById("menuToggle");
+const mainNavigation =
+  document.getElementById("mainNavigation");
+
+if (menuToggle && mainNavigation) {
+
+  menuToggle.addEventListener("click", () => {
+
+    const isOpen =
+      mainNavigation.classList.toggle("is-open");
+
+    menuToggle.classList.toggle(
+      "is-open",
+      isOpen
+    );
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Menü schließen" : "Menü öffnen"
+    );
+
+  });
+
+
+  // Menü schließen, wenn ein Link gewählt wird
+
+  mainNavigation
+    .querySelectorAll("a")
+    .forEach((link) => {
+
+      link.addEventListener("click", () => {
+
+        mainNavigation.classList.remove("is-open");
+        menuToggle.classList.remove("is-open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Menü öffnen"
+        );
+
+      });
+
+    });
+
+}
