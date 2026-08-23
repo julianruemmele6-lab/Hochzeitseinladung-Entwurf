@@ -9,6 +9,9 @@ const successTitle =
 const successText =
   document.getElementById("successText");
 
+const rsvpIntro =
+  document.getElementById("rsvpIntro");
+
 function updateCountdown() {
   const now = new Date();
   const difference = weddingDate - now;
@@ -169,7 +172,7 @@ rsvpForm.reset();
 formStatus.textContent = "";
 
 rsvpForm.style.display = "none";
-
+rsvpIntro.style.display = "none";
 
 if (attendance === "yes") {
 
