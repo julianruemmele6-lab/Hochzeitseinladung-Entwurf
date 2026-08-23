@@ -11,15 +11,29 @@
 
 <body>
 
-  <header class="site-header">
-    <a href="#start" class="logo">T & J</a>
+<header class="site-header">
+  <a href="#start" class="logo">T & J</a>
 
-    <nav class="navigation">
-      <a href="#einladung">Einladung</a>
-      <a href="#datum">Datum</a>
-      <a href="#details">Details</a>
-    </nav>
-  </header>
+  <button
+    class="menu-toggle"
+    id="menuToggle"
+    type="button"
+    aria-label="Menü öffnen"
+    aria-expanded="false"
+    aria-controls="mainNavigation"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="navigation" id="mainNavigation">
+    <a href="#einladung">Einladung</a>
+    <a href="#details">Ablauf</a>
+    <a href="#faq">FAQ</a>
+    <a href="#rsvp">Rückmeldung</a>
+  </nav>
+</header>
 
   <main>
 
