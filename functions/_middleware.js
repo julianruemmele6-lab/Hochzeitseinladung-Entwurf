@@ -234,8 +234,14 @@ function loginPage(showError = false) {
 
 
 export async function onRequest(context) {
+  
   const url = new URL(context.request.url);
+  const protectionEnabled =
+    context.env.PASSWORD_PROTECTION === "on";
 
+  if (!protectionEnabled) {
+    return context.next();
+  }
   // Login-Anfrage darf durch
   if (url.pathname === "/login") {
     return context.next();
