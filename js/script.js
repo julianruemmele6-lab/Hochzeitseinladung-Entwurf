@@ -1,11 +1,5 @@
 const weddingDate = new Date("2027-07-18T00:00:00");
 
-function updateCountdown() {
-  const now = new Date();
-  const difference = weddingDate - now;
-
-  const countdown = document.getElementById("countdown");
-
   const rsvpSuccess =
   document.getElementById("rsvpSuccess");
 
@@ -14,6 +8,12 @@ const successTitle =
 
 const successText =
   document.getElementById("successText");
+
+function updateCountdown() {
+  const now = new Date();
+  const difference = weddingDate - now;
+
+  const countdown = document.getElementById("countdown");
 
   if (difference <= 0) {
     countdown.textContent = "Heute ist unser großer Tag! 💚";
