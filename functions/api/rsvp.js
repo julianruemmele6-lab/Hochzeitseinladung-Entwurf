@@ -42,9 +42,58 @@ export async function onRequestPost(context) {
     const savedMenu =
       attendance === "yes" ? menu : null;
 
-    await context.env.DB
-      .prepare(
-        `INSERT INTO rsvp
+   // Prüfen, ob für diesen Namen bereits eine Antwort existiert
+const existing = await context.env.DB
+  .prepare(
+    `SELECT id
+     FROM rsvp
+     WHERE LOWER(TRIM(name)) = LOWER(TRIM(?))
+     LIMIT 1`
+  )
+  .bind(name)
+  .first();
+
+if (existing) {
+
+  // Bestehende Antwort aktualisieren
+  await context.env.DB
+    .prepare(
+      `UPDATE rsvp
+       SET attendance = ?,
+           menu = ?,
+           food = ?,
+           message = ?,
+           created_at = CURRENT_TIMESTAMP
+       WHERE id = ?`
+    )
+    .bind(
+      attendance,
+      savedMenu,
+      attendance === "yes" ? food : null,
+      message,
+      existing.id
+    )
+    .run();
+
+} else {
+
+  // Neue Antwort speichern
+  await context.env.DB
+    .prepare(
+      `INSERT INTO rsvp
+       (name, attendance, menu, food, message)
+       VALUES (?, ?, ?, ?, ?)`
+    )
+    .bind(
+      name,
+      attendance,
+      savedMenu,
+      attendance === "yes" ? food : null,
+      message
+    )
+    .run();
+
+}
          (name, attendance, menu, food, message)
          VALUES (?, ?, ?, ?, ?)`
       )
