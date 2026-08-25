@@ -2159,37 +2159,24 @@ h1 {
 
 .welcome-sage {
   position: absolute;
-
-  width: 105px;
-
-  left: -75px;
-  top: 65px;
-
+  width: 96px;
+  left: -58px;
+  top: 76px;
   z-index: 0;
   pointer-events: none;
-
-  opacity: 0.72;
-
-  transform: rotate(-13deg);
+  opacity: 0.42;
+  transform: rotate(-10deg);
 }
-
-
-/* Zitrone rechts */
 
 .welcome-lemon {
   position: absolute;
-
-  width: 82px;
-
-  right: -45px;
-  top: 105px;
-
+  width: 108px;
+  right: 70px;
+  top: 58px;
   z-index: 0;
   pointer-events: none;
-
-  opacity: 0.82;
-
-  transform: rotate(10deg);
+  opacity: 0.92;
+  transform: rotate(8deg);
 }
 
 
@@ -2229,45 +2216,32 @@ h1 {
 
 }
 
-
 @keyframes lemonFloat {
-
   0%,
   100% {
-    transform:
-      translateY(0)
-      rotate(10deg);
+    transform: translateY(0) rotate(8deg);
   }
 
   50% {
-    transform:
-      translateY(-6px)
-      rotate(13deg);
+    transform: translateY(-4px) rotate(10deg);
   }
-
 }
 
-
 /* Smartphone */
-
 @media (max-width: 760px) {
 
   .welcome-sage {
-    width: 75px;
-
-    left: -30px;
-    top: 55px;
-
-    opacity: 0.42;
+    width: 68px;
+    left: -18px;
+    top: 62px;
+    opacity: 0.28;
   }
 
   .welcome-lemon {
-    width: 58px;
-
-    right: -18px;
-    top: 105px;
-
-    opacity: 0.62;
+    width: 72px;
+    right: 10px;
+    top: 52px;
+    opacity: 0.78;
   }
 
 }
