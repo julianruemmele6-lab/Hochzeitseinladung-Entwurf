@@ -2145,3 +2145,141 @@ h1 {
   }
 
 }
+/* =========================
+   Deko bei "Schön, dass ihr dabei seid."
+========================= */
+
+/* Die Section wird Bezugspunkt für die Dekoration */
+.rsvp-section {
+  position: relative;
+}
+
+
+/* Salbei links */
+
+.welcome-sage {
+  position: absolute;
+
+  width: 105px;
+
+  left: -75px;
+  top: 65px;
+
+  z-index: 0;
+  pointer-events: none;
+
+  opacity: 0.72;
+
+  transform: rotate(-13deg);
+}
+
+
+/* Zitrone rechts */
+
+.welcome-lemon {
+  position: absolute;
+
+  width: 82px;
+
+  right: -45px;
+  top: 105px;
+
+  z-index: 0;
+  pointer-events: none;
+
+  opacity: 0.82;
+
+  transform: rotate(10deg);
+}
+
+
+/* Text und Formular bleiben vor der Dekoration */
+
+.rsvp-section > *:not(.welcome-sage):not(.welcome-lemon) {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Ganz leichte natürliche Bewegung */
+
+.welcome-sage {
+  animation: sageSway 8s ease-in-out infinite;
+}
+
+.welcome-lemon {
+  animation: lemonFloat 7s ease-in-out infinite;
+}
+
+
+@keyframes sageSway {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-13deg);
+  }
+
+  50% {
+    transform:
+      translateY(-5px)
+      rotate(-10deg);
+  }
+
+}
+
+
+@keyframes lemonFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(10deg);
+  }
+
+  50% {
+    transform:
+      translateY(-6px)
+      rotate(13deg);
+  }
+
+}
+
+
+/* Smartphone */
+
+@media (max-width: 760px) {
+
+  .welcome-sage {
+    width: 75px;
+
+    left: -30px;
+    top: 55px;
+
+    opacity: 0.42;
+  }
+
+  .welcome-lemon {
+    width: 58px;
+
+    right: -18px;
+    top: 105px;
+
+    opacity: 0.62;
+  }
+
+}
+
+
+/* Barrierefreiheit */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .welcome-sage,
+  .welcome-lemon {
+    animation: none;
+  }
+
+}
