@@ -207,38 +207,6 @@ h1 {
   transform: translateY(-2px);
 }
 
-
-/* Botanische Details */
-
-.botanical {
-  position: absolute;
-
-  width: 240px;
-  height: 240px;
-
-  border: 1px solid rgba(170, 160, 188, 0.35);
-  border-radius: 50%;
-
-  color: var(--lavender);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 1.2rem;
-}
-
-.botanical-left {
-  left: -120px;
-  top: 22%;
-}
-
-.botanical-right {
-  right: -120px;
-  bottom: 14%;
-}
-
-
 /* Foto */
 
 .photo-section {
@@ -552,8 +520,14 @@ h1 {
   position: absolute;
   width: 230px;
   height: auto;
+
   pointer-events: none;
   z-index: 1;
+
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .botanical img {
@@ -565,17 +539,81 @@ h1 {
 .botanical-left {
   left: -55px;
   top: 15%;
-  transform: rotate(-14deg);
-  opacity: 0.58;
+  opacity: 0.52;
+
+  animation:
+    lavenderLeftFloat 7s ease-in-out infinite;
 }
 
 .botanical-right {
   right: -55px;
   bottom: 3%;
-  transform: scaleX(-1) rotate(-14deg);
-  opacity: 0.46;
+  opacity: 0.42;
+
+  animation:
+    lavenderRightFloat 8s ease-in-out infinite;
 }
 
+@keyframes lavenderLeftFloat {
+  0% {
+    transform: translateY(0) rotate(-14deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(-11deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-14deg);
+  }
+}
+
+@keyframes lavenderRightFloat {
+  0% {
+    transform: scaleX(-1) translateY(0) rotate(-14deg);
+  }
+
+  50% {
+    transform: scaleX(-1) translateY(-10px) rotate(-11deg);
+  }
+
+  100% {
+    transform: scaleX(-1) translateY(0) rotate(-14deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .botanical {
+    width: 145px;
+  }
+
+  .botanical-left {
+    left: -55px;
+    top: 18%;
+    opacity: 0.32;
+  }
+
+  .botanical-right {
+    right: -55px;
+    bottom: 4%;
+    opacity: 0.28;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .botanical-left,
+  .botanical-right {
+    animation: none;
+  }
+
+  .botanical-left {
+    transform: rotate(-14deg);
+  }
+
+  .botanical-right {
+    transform: scaleX(-1) rotate(-14deg);
+  }
+}
 /* =========================
    Scroll-Animationen
 ========================= */
