@@ -2095,7 +2095,8 @@ h1 {
 }
 
 .palette-cream {
-  background: #f7f3ec;
+  background: #f3eee5;
+  border: 1px solid rgba(77, 89, 65, 0.16);
 }
 
 .palette-sand {
