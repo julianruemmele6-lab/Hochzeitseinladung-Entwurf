@@ -10,6 +10,7 @@ export async function onRequestPost(context) {
     const menu = data.menu || null;
     const food = data.food?.trim() || null;
     const message = data.message?.trim() || null;
+    const song = data.song?.trim() || null;
 
     // Grundlegende Prüfung
     if (!name || !["yes", "no"].includes(attendance)) {
@@ -57,30 +58,32 @@ export async function onRequestPost(context) {
       // Bestehende Antwort aktualisieren
       await context.env.DB
         .prepare(
-          "UPDATE rsvp SET attendance = ?, menu = ?, food = ?, message = ?, created_at = CURRENT_TIMESTAMP WHERE id = ?"
+          "UPDATE rsvp SET attendance = ?, menu = ?, food = ?, song = ?, message = ?, created_at = CURRENT_TIMESTAMP WHERE id = ?"
         )
         .bind(
-          attendance,
-          savedMenu,
-          attendance === "yes" ? food : null,
-          message,
-          existing.id
-        )
+  attendance,
+  savedMenu,
+  attendance === "yes" ? food : null,
+  attendance === "yes" ? song : null,
+  message,
+  existing.id
+)
         .run();
 
     } else {
       // Neue Antwort speichern
       await context.env.DB
         .prepare(
-          "INSERT INTO rsvp (name, attendance, menu, food, message) VALUES (?, ?, ?, ?, ?)"
+          "INSERT INTO rsvp (name, attendance, menu, food, song, message) VALUES (?, ?, ?, ?, ?)"
         )
         .bind(
-          name,
-          attendance,
-          savedMenu,
-          attendance === "yes" ? food : null,
-          message
-        )
+  name,
+  attendance,
+  savedMenu,
+  attendance === "yes" ? food : null,
+  attendance === "yes" ? song : null,
+  message
+)
         .run();
     }
 
