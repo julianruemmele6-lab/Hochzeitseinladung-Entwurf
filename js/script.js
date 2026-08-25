@@ -136,12 +136,13 @@ rsvpForm.addEventListener("submit", async (event) => {
   const formData = new FormData(rsvpForm);
 
   const data = {
-    name: formData.get("name"),
-    attendance: formData.get("attendance"),
-    menu: formData.get("menu"),
-    food: formData.get("food"),
-    message: formData.get("message")
-  };
+  name: formData.get("name"),
+  attendance: formData.get("attendance"),
+  menu: formData.get("menu"),
+  food: formData.get("food"),
+  message: formData.get("message"),
+  song: formData.get("song")
+};
 
   formStatus.textContent = "Deine Antwort wird gespeichert …";
 
