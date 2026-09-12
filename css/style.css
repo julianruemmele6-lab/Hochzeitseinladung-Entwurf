@@ -2170,15 +2170,19 @@ h1 {
 
 .welcome-lemon {
   position: absolute;
-  width: 108px;
-  right: 70px;
-  top: 58px;
+
+  width: 92px;
+
+  right: 68px;
+  top: 72px;
+
   z-index: 0;
   pointer-events: none;
-  opacity: 0.92;
-  transform: rotate(8deg);
-}
 
+  opacity: 0.82;
+
+  transform: rotate(-8deg);
+}
 
 /* Text und Formular bleiben vor der Dekoration */
 
@@ -2217,14 +2221,20 @@ h1 {
 }
 
 @keyframes lemonFloat {
+
   0%,
   100% {
-    transform: translateY(0) rotate(8deg);
+    transform:
+      translateY(0)
+      rotate(-8deg);
   }
 
   50% {
-    transform: translateY(-4px) rotate(10deg);
+    transform:
+      translateY(-5px)
+      rotate(-4deg);
   }
+
 }
 
 /* Smartphone */
@@ -2237,13 +2247,13 @@ h1 {
     opacity: 0.28;
   }
 
-  .welcome-lemon {
-    width: 72px;
-    right: 10px;
-    top: 52px;
-    opacity: 0.78;
-  }
+.welcome-lemon {
+  width: 62px;
 
+  right: 12px;
+  top: 64px;
+
+  opacity: 0.72;
 }
 
 
