@@ -2647,7 +2647,7 @@ h2 {
   }
 
 }
-  /* =========================
+/* =========================
    Location Section – ein Ort mit Bild
 ========================= */
 
@@ -2670,31 +2670,55 @@ h2 {
   display: grid;
   grid-template-columns: minmax(320px, 430px) minmax(320px, 560px);
   gap: 42px;
+
   align-items: center;
   justify-content: center;
 }
 
 .location-card-single {
-  text-align: left;
-  padding: 42px 38px;
   min-height: auto;
+  padding: 42px 38px;
+
+  text-align: left;
 }
+
+
+/* =========================
+   Location-Bild
+========================= */
 
 .location-preview {
   margin: 0;
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  background: transparent;
+
+  box-shadow:
+    0 18px 45px rgba(70, 74, 60, 0.10);
 }
 
 .location-preview img {
   display: block;
+
   width: 100%;
-  height: 100%;
-  min-height: 420px;
+  height: 420px;
+
   object-fit: cover;
-  border-radius: 34px;
-  box-shadow: 0 18px 45px rgba(70, 74, 60, 0.10);
+  object-position: center;
+
+  border-radius: inherit;
 }
 
+
+/* =========================
+   Tablet
+========================= */
+
 @media (max-width: 980px) {
+
   .location-showcase {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -2711,11 +2735,18 @@ h2 {
   }
 
   .location-preview img {
-    min-height: 300px;
+    height: 340px;
   }
+
 }
 
+
+/* =========================
+   Smartphone
+========================= */
+
 @media (max-width: 640px) {
+
   .location-intro {
     margin-bottom: 42px;
   }
@@ -2724,21 +2755,12 @@ h2 {
     padding: 30px 24px;
   }
 
-  .location-preview img {
-    min-height: 240px;
+  .location-preview {
     border-radius: 24px;
   }
-}
-  .location-preview {
-  margin: 26px 0 0;
-  border-radius: 32px;
-  overflow: hidden;
-}
 
-.location-preview img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 32px;
-  object-fit: cover;
+  .location-preview img {
+    height: 260px;
+  }
+
 }
