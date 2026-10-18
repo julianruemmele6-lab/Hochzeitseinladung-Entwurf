@@ -2605,3 +2605,85 @@ h2 {
   }
 
 }
+  /* =========================
+   Location Section – ein Ort mit Bild
+========================= */
+
+.location-section {
+  text-align: center;
+}
+
+.location-section h2 {
+  max-width: 700px;
+  margin: 0 auto 24px;
+}
+
+.location-intro {
+  max-width: 760px;
+  margin: 0 auto 70px;
+  line-height: 1.8;
+}
+
+.location-showcase {
+  display: grid;
+  grid-template-columns: minmax(320px, 430px) minmax(320px, 560px);
+  gap: 42px;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-card-single {
+  text-align: left;
+  padding: 42px 38px;
+  min-height: auto;
+}
+
+.location-preview {
+  margin: 0;
+}
+
+.location-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  border-radius: 34px;
+  box-shadow: 0 18px 45px rgba(70, 74, 60, 0.10);
+}
+
+@media (max-width: 980px) {
+  .location-showcase {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .location-card-single {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .location-preview {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .location-preview img {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .location-intro {
+    margin-bottom: 42px;
+  }
+
+  .location-card-single {
+    padding: 30px 24px;
+  }
+
+  .location-preview img {
+    min-height: 240px;
+    border-radius: 24px;
+  }
+}
