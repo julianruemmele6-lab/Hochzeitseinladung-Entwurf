@@ -2759,20 +2759,6 @@ h2 {
 
 }
 
-/* =========================
-   RSVP vorübergehend deaktivieren
-========================= */
-
-section#rsvp {
-  display: none !important;
-}
-
-/* Menüpunkt Rückmeldung ausblenden */
-
-#mainNavigation a[href="#rsvp"] {
-  display: none !important;
-}
-
 
 
 
