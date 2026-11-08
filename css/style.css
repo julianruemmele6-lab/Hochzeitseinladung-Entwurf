@@ -2759,6 +2759,20 @@ h2 {
 
 }
 
+.faq-answer a {
+  color: var(--olive-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--lavender);
+  transition: color 0.3s ease;
+}
 
+.faq-answer a:hover {
+  color: var(--lavender);
+}
+
+.faq-answer p + p {
+  margin-top: 14px;
+}
+  
 
 
