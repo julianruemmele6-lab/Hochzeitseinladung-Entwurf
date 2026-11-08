@@ -2765,3 +2765,21 @@ h2 {
   }
 
 }
+
+/* RSVP-Navigation ausblenden */
+
+.navigation a[href="#rsvp"] {
+  display: none;
+}
+  
+/* =========================
+   RSVP vorübergehend ausblenden
+========================= */
+
+#rsvp {
+  display: none;
+}
+
+
+
+
