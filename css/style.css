@@ -2793,3 +2793,69 @@ h2 {
 
 </section>
 
+/* =========================
+   Ansprechpartner Hochzeit
+========================= */
+
+.program-contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  max-width: 650px;
+  margin: 45px auto 35px;
+}
+
+.program-contact {
+  padding: 30px 22px;
+
+  border: 1px solid var(--lavender-light);
+  border-radius: 28px;
+
+  background: rgba(255, 253, 249, 0.5);
+
+  text-align: center;
+}
+
+.program-contact h3 {
+  margin: 0 0 20px;
+
+  color: var(--olive-dark);
+
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.program-contact a {
+  color: var(--olive-dark);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+
+  text-decoration: none;
+  border-bottom: 1px solid var(--lavender);
+
+  padding-bottom: 4px;
+
+  transition: color 0.3s ease;
+}
+
+.program-contact a:hover {
+  color: var(--lavender);
+}
+
+/* Smartphone */
+
+@media (max-width: 760px) {
+
+  .program-contacts {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 35px;
+  }
+
+  .program-contact {
+    padding: 28px 20px;
+  }
+
+}
