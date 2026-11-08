@@ -2774,5 +2774,22 @@ h2 {
   margin-top: 14px;
 }
   
+<section class="rsvp-placeholder section" id="rsvp-info">
 
+  <p class="section-label">Rückmeldung</p>
+
+  <h2>Weitere Informationen folgen.</h2>
+
+  <p>
+    Sobald alle Details zu unserem Hochzeitsessen feststehen,
+    könnt ihr hier eure Menüauswahl treffen und uns weitere
+    wichtige Informationen wie Allergien oder
+    Unverträglichkeiten mitteilen.
+  </p>
+
+  <p class="rsvp-placeholder-note">
+    Wir geben euch Bescheid, sobald das Formular verfügbar ist.
+  </p>
+
+</section>
 
